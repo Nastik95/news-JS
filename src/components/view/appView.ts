@@ -18,7 +18,6 @@ export class AppView {
     drawSources(data: Readonly<RootObjectSource>) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
-        console.log(data);
     }
 }
 
