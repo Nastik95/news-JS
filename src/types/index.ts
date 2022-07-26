@@ -23,3 +23,7 @@ export interface RootObjectSource {
     status: string;
     sources: ISource[];
 }
+
+export interface RootObjectArticle {
+    articles: IArticle[];
+}

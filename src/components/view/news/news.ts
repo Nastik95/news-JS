@@ -1,10 +1,10 @@
-import { IArticle } from '../../../types/index'
+import { IArticle } from '../../../types/index';
 import './news.css';
 
 class News {
-    public draw(data: Readonly<IArticle[]> ): void {
+    public draw(data: Readonly<IArticle[]>): void {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
-console.log(data);
+        console.log(data);
         const fragment = document.createDocumentFragment();
         const newsItemTemp = document.querySelector('#newsItemTemp') as HTMLTemplateElement;
 
@@ -16,7 +16,8 @@ console.log(data);
             (newsClone.querySelector('.news__meta-photo') as HTMLElement).style.backgroundImage = `url(${
                 item.urlToImage || 'img/news_placeholder.jpg'
             })`;
-            (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent = item.author || item.source.name;
+            (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent =
+                item.author || item.source.name;
             (newsClone.querySelector('.news__meta-date') as HTMLElement).textContent = item.publishedAt
                 .slice(0, 10)
                 .split('-')
