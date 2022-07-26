@@ -10,6 +10,16 @@ export interface IArticle {
 }
 
 export interface ISource {
-    id: string,
-    name: string,
+    id: string;
+    name: string;
+    description: string;
+    url: string;
+    category: string;
+    language: string;
+    country: string;
+}
+
+export interface RootObjectSource {
+    status: string;
+    sources: ISource[];
 }
