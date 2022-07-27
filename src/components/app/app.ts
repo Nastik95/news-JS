@@ -12,9 +12,9 @@ class App {
 
     start() {
         (document.querySelector('.sources') as HTMLElement).addEventListener('click', (e) =>
-            this.controller.getNews(e, (data: Readonly<RootObjectArticle>) => this.view.drawNews(data))
+            this.controller.getNews<Readonly<RootObjectArticle>>(e, (data) => this.view.drawNews(data!))
         );
-        this.controller.getSources((data: Readonly<RootObjectSource>) => this.view.drawSources(data));
+        this.controller.getSources<Readonly<RootObjectSource>>((data) => this.view.drawSources(data!));
     }
 }
 
