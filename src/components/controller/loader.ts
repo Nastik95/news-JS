@@ -1,4 +1,4 @@
-import { IOptions } from "../../types/index";
+import { IOptions } from '../../types/index';
 class Loader {
     baseLink: string;
     options: IOptions;
@@ -8,7 +8,7 @@ class Loader {
     }
 
     getResp(
-        { endpoint, options }: { endpoint: string; options?: IOptions }, 
+        { endpoint, options }: { endpoint: string; options?: IOptions },
         callback = (): void => {
             console.error('No callback for GET response');
         }
@@ -26,7 +26,8 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: IOptions, endpoint: string) {console.log(endpoint)
+    makeUrl(options: IOptions, endpoint: string) {
+        console.log(endpoint);
         const urlOptions: { [index: string]: string } = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 

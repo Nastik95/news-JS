@@ -1,5 +1,5 @@
 import AppLoader from './appLoader';
-import { Callback } from '../../types/index'
+import { Callback } from '../../types/index';
 
 class AppController extends AppLoader {
     getSources<T>(callback: Callback<T>) {
